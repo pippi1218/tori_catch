@@ -133,7 +133,7 @@ window.onload=function(){
 
         tweetBtn.ontouchend = function(){
             const url = encodeURI("http://pippi1218.starfree.jp/");
-			window.open("http://twitter.com/intent/tweet?text=頑張って" + point + "枚入手した&hashtags=toricatch&url=" + url);
+			window.open("http://twitter.com/intent/tweet?text=" + point + "羽捕まえたよ！&hashtags=toricatch&url=" + url);
         };
     };
 
