@@ -9,6 +9,10 @@ window.onload=function(){
     const clickSndUrl = "click.wav";
     game.preload([clickSndUrl]);
 
+    //bgm
+    const bgmUrl = "bgm.mp3";
+    game.preload([bgmUrl]);
+
     //キャラ１画像
     const charImg1Url = "inko.png";
     game.preload([charImg1Url]);
@@ -82,6 +86,9 @@ window.onload=function(){
 
 
         game.onenterframe = function(){
+
+            game.assets[bgmUrl].play();
+
             if(state == 0){
                 inkoImg.x = -200;
                 inkoImg.y = 100;
