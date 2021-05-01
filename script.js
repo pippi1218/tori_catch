@@ -13,6 +13,10 @@ window.onload=function(){
     const charImg1Url = "inko.png";
     game.preload([charImg1Url]);
 
+    //背景雲画像
+    const cloudImgUrl = "cloud.png";
+    game.preload([cloudImgUrl]);
+
     //リトライボタン
 	const retryImgUrl = "retry.png";
 	game.preload([retryImgUrl]);
@@ -39,6 +43,17 @@ window.onload=function(){
         mainScene.addChild(scoreText);
 
         scoreText.text = "現在：" + point;
+
+        //背景
+        const cloudImg = new Sprite(100,50);
+        cloudImg.moveTo(50,70);
+        cloudImg.image = game.assets[cloudImgUrl];
+        mainScene.addChild(cloudImg);
+
+        const cloudImg2 = new Sprite(100,50);
+        cloudImg2.moveTo(250,130);
+        cloudImg2.image = game.assets[cloudImgUrl];
+        mainScene.addChild(cloudImg2);
 
         //inkoボタン
         const　inkoImg = new Sprite(100,100);
@@ -91,7 +106,7 @@ window.onload=function(){
                 inkoImg.x += 10;
             }
             if(state == 5){
-                inkoImg.x += 20;
+                inkoImg.x += 10;
                 inkoImg.y = Math.random()*400;
             }
 
